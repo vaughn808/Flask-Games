@@ -1,0 +1,40 @@
+.test {
+  width: 70px;
+  height: 70px;
+  background-color: yellow;
+}
+
+@media only screen and (min-width: 600px) {
+    .token {
+        height: 100px;
+    }
+    .horizontal {
+    display: inline-block;
+    width: 100px;
+    border-top: 6px solid green;
+}
+svg {
+  width: 65%;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .token {
+        height: 50px;
+    }
+    .horizontal {
+    display: inline-block;
+    width: 50px;
+    border-top: 6px solid green;
+}
+svg {
+  width: 90%;
+}
+}
+
+
+.vl {
+  border-left: 6px solid green;
+  height: 100px;
+}

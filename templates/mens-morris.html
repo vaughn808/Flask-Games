@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block css_page %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mens-morris.css') }}">
+{% endblock css_page %}
+{% block body %}
+
+<div class="container pt-5 mt-5" width="800" height="700">
+    <div class="col-12 border text-center">
+        <p class="h4">Three Men's Morris</p>
+    </div>
+    <div class="col-12 pt-1 mt-1 pb-3 mb-3 text-center">
+        <svg class="img-fluid" viewBox="0 0 800 700" >
+
+            <rect x="10%" y="8%" width="78%" height="85%" style="fill:rgb(0,0,255);stroke-width:4;stroke:rgb(255,0,0)" />
+
+            <line x1="89%" y1="50%" x2="10%" y2="50%" style="stroke:rgb(255,0,0);stroke-width:4" />
+            <line x1="9%" y1="95%" x2="89%" y2="7%" style="stroke:rgb(255,0,0);stroke-width:4" />
+            <line x1="10%" y1="8%" x2="89%" y2="95%" style="stroke:rgb(255,0,0);stroke-width:4" />
+            <line x1="48%" y1="6%" x2="48%" y2="95%" style="stroke:rgb(255,0,0);stroke-width:4" />
+            <circle id="circle1" cx="10%" cy="8%" r="20" stroke="black" stroke-width="3" fill="red" onclick=colorChange("circle1") />
+            <circle id="circle2" cx="48%" cy="8%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle3" cx="88%" cy="8%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle4" cx="10%" cy="50%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle5" cx="48%" cy="50%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle6" cx="88%" cy="50%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle7" cx="10%" cy="93%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle8" cx="48%" cy="93%" r="20" stroke="black" stroke-width="3" fill="red" />
+            <circle id="circle9" cx="88%" cy="93%" r="20" stroke="black" stroke-width="3" fill="red" />
+            Sorry, your browser does not support inline SVG.
+        </svg>
+    </div>
+</div>
+
+<button type="button"
+onclick=colorChange("circle1")>
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+{% block script %}
+<script>
+    function colorChange(circleName) {
+    document.getElementById(circleName).style.fill = "blue"
+    }
+</script>
+{% endblock script %}
+{% endblock body %}
