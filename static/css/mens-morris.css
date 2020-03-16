@@ -1,40 +1,53 @@
-.test {
-  width: 70px;
-  height: 70px;
-  background-color: yellow;
-}
-
 @media only screen and (min-width: 600px) {
-    .token {
-        height: 100px;
+    #token {
+      width: 65%;
     }
-    .horizontal {
-    display: inline-block;
-    width: 100px;
-    border-top: 6px solid green;
-}
-svg {
-  width: 65%;
-}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    .token {
-        height: 50px;
+    #token {
+      width: 90%;
     }
-    .horizontal {
-    display: inline-block;
-    width: 50px;
-    border-top: 6px solid green;
 }
-svg {
-  width: 90%;
+
+rect {
+    fill: #a1887f;
+    stroke-width: 4;
+    stroke: #795548;
 }
+
+line {
+    stroke: #795548;
+    stroke-width: 4
+}
+
+circle {
+stroke: #795548;
+stroke-width: 3;
+fill: #e0e0e0;
+}
+
+.token-circle:hover {
+    fill: #ffff00 !important;
+}
+
+.current-turn1 {
+    background-color: #b0bec5;
+}
+
+.current-turn2 {
+    background-color: #fafafa;
+}
+
+.player1 {
+    fill: #3e2723;
+}
+
+.player2 {
+    fill: #e65100;
 }
 
 
-.vl {
-  border-left: 6px solid green;
-  height: 100px;
-}
+
+
